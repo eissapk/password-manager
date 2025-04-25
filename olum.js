@@ -109,3 +109,4 @@ module.exports.mkPass = mkPass;
 module.exports.exists = exists;
 module.exports.decrypt = decrypt;
 module.exports.encrypt = encrypt;
+module.exports.hashPwd = hashPwd;

@@ -4,9 +4,10 @@ const fs = require("fs");
 const path = require("path");
 
 // connect to db
+const fileName = "credentials.json";
 let db = null;
 try {
-  db = JSON.parse(fs.readFileSync(path.resolve(__dirname, "./db.json")).toString());
+  db = JSON.parse(fs.readFileSync(path.resolve(__dirname, "./" + fileName)).toString());
 } catch (err) {
   return console.error(colors.red("Couldn't connect to db!"), "\n", err);
 }
@@ -27,7 +28,7 @@ function next(password) {
   console.log(colors.green("[+] Added password."));
 
   try {
-    fs.writeFileSync(path.resolve(__dirname, "./db.json"), JSON.stringify(db, null, 2));
+    fs.writeFileSync(path.resolve(__dirname, "./" + fileName), JSON.stringify(db, null, 2));
     console.log(colors.green("[+] Updated db."));
   } catch (err) {
     console.log(colors.red("Error while adding password!"), err);

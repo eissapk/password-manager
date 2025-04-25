@@ -1,5 +1,6 @@
 > CLI Tool to for managing passwords (requires node14)
 
+# Linux
 ##### Get started
 ```
 cd /path/to/project # navigate to project folder
@@ -70,4 +71,10 @@ pass get --id 2 # show acccount with id 2
 pass get --name google # show acccount with name google
 pass add --name google --username foo@gmail.com --location www.google.com # saves password for google
 pass make --length 20 # make random strong password of 20 chars
+```
+
+##### Create master password
+
+```
+node config.js
 ```
