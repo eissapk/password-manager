@@ -66,6 +66,8 @@ pass --version
 
 ```
 pass get # lists all passwords in db.json file
+pass get --id 2 # show acccount with id 2
+pass get --name google # show acccount with name google
 pass add --name google --username foo@gmail.com --location www.google.com # saves password for google
 pass make --length 20 # make random strong password of 20 chars
 ```
